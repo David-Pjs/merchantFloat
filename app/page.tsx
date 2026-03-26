@@ -32,15 +32,17 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-green-100 border border-green-200 text-green-700 text-xs font-bold px-4 py-2 rounded-full mb-8">
             <Zap size={11} className="text-green-600" />
-            Extends Quickteller by Interswitch
+            AI-Powered Merchant Credit · Built on Interswitch
           </div>
           <h1 className="text-5xl sm:text-7xl font-black text-gray-900 leading-[1.05] mb-6 tracking-tight">
-            Your POS data
+            Your POS machine has been
             <br />
-            <span className="text-green-600">is your credit score</span>
+            <span className="text-green-600">building your credit score.</span>
+            <br />
+            We just started reading it.
           </h1>
-          <p className="text-gray-500 text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            Emeka sells ₦4M of produce a month but waits 40 hours for his money. We give it to him early — and collect automatically from his next Quickteller settlement.
+          <p className="text-gray-500 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+            MerchantFloat analyses 90 days of your Interswitch transaction history, scores your creditworthiness in seconds, and offers you working capital instantly — no bank visits, no collateral, no guarantors. Repayment auto-deducts from your daily POS settlement.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/onboarding"
