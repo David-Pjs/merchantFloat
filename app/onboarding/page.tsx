@@ -137,7 +137,7 @@ export default function OnboardingPage() {
   }
 
   function handleBusinessNext() {
-    if (!form.businessName || !form.businessType) return;
+    if (!form.businessType) return;
     setStep("scanning");
     runScan();
   }
@@ -462,7 +462,7 @@ export default function OnboardingPage() {
           <div className="px-6 pb-6">
             <button
               onClick={handleBusinessNext}
-              disabled={!form.businessName || !form.businessType}
+              disabled={!form.businessType}
               className="w-full bg-green-600 text-white font-semibold py-3.5 rounded-2xl hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Scan My Accounts <ArrowRight size={16} />
