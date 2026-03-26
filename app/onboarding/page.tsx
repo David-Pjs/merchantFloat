@@ -312,16 +312,15 @@ export default function OnboardingPage() {
             </div>
 
             {/* Sandbox hint */}
-            <div className="mt-4 bg-blue-50 border border-blue-100 rounded-xl p-3">
+            <div className="mt-4 bg-gray-950 rounded-xl p-3">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-xs text-blue-600 font-medium">Demo BVN (Interswitch sandbox)</p>
-                <span className="text-[10px] text-blue-400">tap to verify instantly</span>
+                <p className="text-xs text-gray-400 font-medium">Demo BVN (Interswitch sandbox)</p>
+                <span className="text-[10px] text-gray-500">tap to verify instantly</span>
               </div>
               <button
                 type="button"
                 onClick={() => {
                   setForm((prev) => ({ ...prev, bvn: "11111111111" }));
-                  // slight delay so state updates before the verify call reads it
                   setTimeout(() => {
                     setBvnLoading(true);
                     setBVNResult(null);
@@ -347,7 +346,7 @@ export default function OnboardingPage() {
                       });
                   }, 80);
                 }}
-                className="w-full text-sm font-mono font-bold text-white bg-blue-600 px-4 py-2.5 rounded-xl hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                className="w-full text-sm font-mono font-bold text-gray-950 bg-white px-4 py-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
               >
                 11111111111 <ArrowRight size={14} />
               </button>
