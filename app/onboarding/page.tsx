@@ -167,8 +167,8 @@ export default function OnboardingPage() {
               "Get a loan offer based on your real POS history",
             ].map((text, i) => (
               <div key={i} className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle size={14} className="text-green-600" />
+                <div className="w-7 h-7 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 text-green-600 text-sm font-bold">
+                  ✓
                 </div>
                 <p className="text-sm text-gray-600">{text}</p>
               </div>
@@ -182,12 +182,9 @@ export default function OnboardingPage() {
             >
               Get Started <ArrowRight size={16} />
             </button>
-            <div className="flex items-center justify-center gap-1.5 mt-3">
-              <Shield size={11} className="text-gray-400" />
-              <p className="text-center text-xs text-gray-400">
-                Secured by Interswitch · Data never shared
-              </p>
-            </div>
+            <p className="text-center text-xs text-gray-400 mt-3">
+              🔒 Secured by Interswitch · Data never shared
+            </p>
           </div>
         </div>
       </div>
@@ -408,7 +405,7 @@ export default function OnboardingPage() {
             {/* Show BVN verified name if we got it */}
             {bvnVerifiedName && (
               <div className="mb-4 bg-green-50 border border-green-100 rounded-xl p-3 flex items-center gap-2">
-                <CheckCircle size={14} className="text-green-600 flex-shrink-0" />
+                <span className="text-green-600 text-sm font-bold flex-shrink-0">✓</span>
                 <div>
                   <p className="text-xs font-bold text-green-700">BVN Verified via Interswitch</p>
                   <p className="text-xs text-green-600">{bvnVerifiedName}</p>
