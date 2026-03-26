@@ -74,7 +74,7 @@ function AnimatedScoreGauge({ score, color }: { score: number; color: string }) 
   );
 }
 
-function PremiumLoanCard({ merchant }: { merchant: Merchant }) {
+function PremiumLoanCard({ merchant, onDetails }: { merchant: Merchant; onDetails?: () => void }) {
   const animatedAmount = useCountUp(merchant.loanEligible ? merchant.qualifiedAmount : 0, 1600);
 
   if (!merchant.loanEligible) {
@@ -157,7 +157,7 @@ function PremiumLoanCard({ merchant }: { merchant: Merchant }) {
           >
             Get This Loan
           </Link>
-          <button className="px-4 py-3 rounded-xl border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors">
+          <button onClick={onDetails} className="px-4 py-3 rounded-xl border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors">
             Details
           </button>
         </div>
@@ -340,7 +340,7 @@ function DashboardContent() {
         {/* OVERVIEW */}
         {tab === "overview" && (
           <>
-            <PremiumLoanCard merchant={merchant} />
+            <PremiumLoanCard merchant={merchant} onDetails={() => setTab("insights")} />
 
             {/* POS data credit card — the core product insight */}
             <div className="rounded-2xl p-4 border border-green-100 bg-white shadow-sm">
