@@ -312,10 +312,10 @@ export default function OnboardingPage() {
             </div>
 
             {/* Sandbox hint */}
-            <div className="mt-4 bg-gray-950 rounded-xl p-3">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-xs text-gray-400 font-medium">Demo BVN (Interswitch sandbox)</p>
-                <span className="text-[10px] text-gray-500">tap to verify instantly</span>
+            <div className="mt-4 rounded-xl p-3" style={{ background: "linear-gradient(135deg, #14532d 0%, #166534 100%)" }}>
+              <div className="flex items-center justify-between mb-2.5">
+                <p className="text-xs text-green-200 font-semibold">Demo BVN — Interswitch sandbox</p>
+                <span className="text-[10px] text-green-400">tap to verify instantly</span>
               </div>
               <button
                 type="button"
@@ -346,7 +346,7 @@ export default function OnboardingPage() {
                       });
                   }, 80);
                 }}
-                className="w-full text-sm font-mono font-bold text-gray-950 bg-white px-4 py-2.5 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+                className="w-full text-sm font-mono font-bold text-green-900 bg-green-100 px-4 py-2.5 rounded-lg hover:bg-white transition-colors flex items-center justify-center gap-2"
               >
                 11111111111 <ArrowRight size={14} />
               </button>
