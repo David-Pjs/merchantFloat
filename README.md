@@ -85,10 +85,8 @@ Score ≥ 50 = eligible. Loan = 15–20% of monthly revenue, scaled by score.
 - Designed custom credit scoring system (300–850 scale): customer loyalty (25%), revenue consistency (25%), transaction activity (15%), revenue strength (35%)
 - Implemented risk classification: Low Risk (≥700), Medium Risk (520–699), High Risk (<520)
 - Built dynamic loan offer logic: low risk → up to 15 days revenue, medium risk → up to 7 days revenue
-- Developed AI insights engine for actionable merchant recommendations
-- Exposed AI model via FastAPI service (GET endpoints for dashboard, POST for real-time processing)
-- Refactored model into reusable pipeline: `process_dataframe()`, `run_merchant_float_ai()`, `run_merchant_float_ai_from_df()`
-- Contributed to system architecture: Transaction Data → Backend → AI Engine (FastAPI) → Scoring Output → Frontend Dashboard
+- Developed AI insights engine providing actionable merchant recommendations (e.g. reduce settlement delays, improve retention)
+- Built and validated standalone AI scoring pipeline — confirmed producing live results across merchant segments
 
 ### Selimat Akinwale — Product Manager
 - Delivered the full Product Requirements Document (PRD) for MerchantFloat
